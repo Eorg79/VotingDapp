@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/VotingDapp/static/css/main.b8f1835d.chunk.css",
-    "main.js": "/VotingDapp/static/js/main.a099f5f2.chunk.js",
-    "main.js.map": "/VotingDapp/static/js/main.a099f5f2.chunk.js.map",
-    "runtime-main.js": "/VotingDapp/static/js/runtime-main.874071d8.js",
-    "runtime-main.js.map": "/VotingDapp/static/js/runtime-main.874071d8.js.map",
-    "static/js/2.82c4785c.chunk.js": "/VotingDapp/static/js/2.82c4785c.chunk.js",
-    "static/js/2.82c4785c.chunk.js.map": "/VotingDapp/static/js/2.82c4785c.chunk.js.map",
-    "index.html": "/VotingDapp/index.html",
-    "precache-manifest.491526ba7bbb4785665cce11c87434dc.js": "/VotingDapp/precache-manifest.491526ba7bbb4785665cce11c87434dc.js",
-    "service-worker.js": "/VotingDapp/service-worker.js",
-    "static/css/main.b8f1835d.chunk.css.map": "/VotingDapp/static/css/main.b8f1835d.chunk.css.map",
-    "static/media/buffet.jpg": "/VotingDapp/static/media/buffet.fca9a9dd.jpg"
+    "main.css": "/VotingDapp/client/static/css/main.b8f1835d.chunk.css",
+    "main.js": "/VotingDapp/client/static/js/main.f7112dd0.chunk.js",
+    "main.js.map": "/VotingDapp/client/static/js/main.f7112dd0.chunk.js.map",
+    "runtime-main.js": "/VotingDapp/client/static/js/runtime-main.32ecd67c.js",
+    "runtime-main.js.map": "/VotingDapp/client/static/js/runtime-main.32ecd67c.js.map",
+    "static/js/2.3fdcb863.chunk.js": "/VotingDapp/client/static/js/2.3fdcb863.chunk.js",
+    "static/js/2.3fdcb863.chunk.js.map": "/VotingDapp/client/static/js/2.3fdcb863.chunk.js.map",
+    "index.html": "/VotingDapp/client/index.html",
+    "precache-manifest.abef75b61ca83523a20183651856236e.js": "/VotingDapp/client/precache-manifest.abef75b61ca83523a20183651856236e.js",
+    "service-worker.js": "/VotingDapp/client/service-worker.js",
+    "static/css/main.b8f1835d.chunk.css.map": "/VotingDapp/client/static/css/main.b8f1835d.chunk.css.map",
+    "static/media/buffet.jpg": "/VotingDapp/client/static/media/buffet.fca9a9dd.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.874071d8.js",
-    "static/js/2.82c4785c.chunk.js",
+    "static/js/runtime-main.32ecd67c.js",
+    "static/js/2.3fdcb863.chunk.js",
     "static/css/main.b8f1835d.chunk.css",
-    "static/js/main.a099f5f2.chunk.js"
+    "static/js/main.f7112dd0.chunk.js"
   ]
 }

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import { ContractContext } from '../utils/ContractContext';
 
 const Voting = () => {
@@ -8,27 +8,6 @@ const Voting = () => {
     await contract.methods.setVote(proposalId).send({from: accounts[0]});
     alert('Your vote has been sent, you should see the transaction in your wallet shortly');
   };
-
-  
-  useEffect(() => {
-    const getExistingProposals = async () => {
-      await contract.getPastEvents('ProposalRegistered', {
-        filter: {
-            value: []    
-        },
-        fromBlock: 0,             
-        toBlock: 'latest'},
-       (err, events) => {
-            events.map( async (proposal) => {
-            let id = proposal.returnValues._proposalId;
-            let description = await contract.methods.getOneProposal(id).call({from: accounts[0]})
-            let Proposal = {Id: id, Description: description.description};
-            setProposalsList(proposalsList => [...proposalsList, Proposal]);
-          });
-        });
-      };
-    getExistingProposals();
-    }, []);
 
   return (
          <>

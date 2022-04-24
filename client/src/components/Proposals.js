@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import { ContractContext } from '../utils/ContractContext';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
@@ -23,27 +23,7 @@ const Proposals = () => {
     }); 
 
     const formik = useFormik({ initialValues, onSubmit, validationSchema });
-  
-    useEffect(() => {
-      const getExistingProposals = async () => {
-        await contract.getPastEvents('ProposalRegistered', {
-          filter: {
-              value: []    
-          },
-          fromBlock: 0,             
-          toBlock: 'latest'},
-         (err, events) => {
-              events.map( async (proposal) => {
-              let id = proposal.returnValues._proposalId;
-              let description = await contract.methods.getOneProposal(id).call({from: accounts[0]})
-              let Proposal = {Id: id, Description: description.description};
-              setProposalsList(proposalsList => [...proposalsList, Proposal]);
-            });
-          });
-        };
-      getExistingProposals();
-      }, []);
-    
+
       return (
          <>
          {isVoter ? ( 

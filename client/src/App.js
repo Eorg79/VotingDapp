@@ -81,6 +81,22 @@ const App = () => {
            setHasVoted(true);
           };  
 
+
+          await instance.getPastEvents('ProposalRegistered', {
+            filter: {
+                value: []    
+            },
+            fromBlock: 0,             
+            toBlock: 'latest'},
+           (err, events) => {
+                events.map( async (proposal) => {
+                let id = proposal.returnValues._proposalId;
+                let description = await instance.methods.getOneProposal(id).call({from: accounts[0]})
+                let Proposal = {Id: id, Description: description.description};
+                setProposalsList(proposalsList => [...proposalsList, Proposal]);
+              });
+            });
+          
           //retrieve WorkflowStatusChange events
           await instance.events.WorkflowStatusChange()   
           .on('data', event => setWorkflowStatus(event.returnValues._newStatus))
